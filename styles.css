@@ -3,18 +3,19 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* Beyaz arka plan */
-    color: #000; /* Siyah metin */
+    background-color: #fff;
+    color: #000;
+    min-height: 100vh; /* Sayfanın tam ekran yüksekliğini kaplamasını sağlar */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Üst Kısım (Header) */
 header {
     background-color: #f8f8f8;
     color: #1c1c1c;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 .header-container {
@@ -26,13 +27,8 @@ header {
 }
 
 header .logo {
-    max-width: 150px; /* Logo boyutunu sınırlamak için */
+    max-width: 150px;
     height: auto;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0;
 }
 
 .social-icons {
@@ -41,8 +37,8 @@ header p {
 }
 
 .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s ease;
 }
 
@@ -50,19 +46,33 @@ header p {
     transform: scale(1.1);
 }
 
+header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+}
+
 /* Ana İçerik */
 main {
     padding: 2rem;
+    flex: 1; /* Main'in içeriği doldurmasını sağlar, footer'ı aşağı iter */
 }
 
+/* Games Bölümü */
 #games-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    text-align: center;
+}
+
+#games-list h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .game-card {
-    background-color: #f4f4f4; /* Kartlar için açık gri arka plan */
+    background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1.5rem;
@@ -80,12 +90,12 @@ main {
 .game-card h3 {
     font-size: 1.5rem;
     margin: 0 0 0.5rem;
-    color: #000; /* Siyah başlık */
+    color: #000;
 }
 
 .game-card p {
     font-size: 1rem;
-    color: #333; /* Koyu gri metin */
+    color: #333;
 }
 
 .game-card a {
@@ -103,14 +113,28 @@ main {
     background-color: #0056b3;
 }
 
+/* Tokenomics Bölümü */
+#tokenomics {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#tokenomics h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#tokenomicsChart {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 /* Alt Kısım (Footer) */
 footer {
-    background-color: #f8f8f8; /* Hafif gri, header ile uyumlu */
-    color: #1c1c1c; /* Koyu metin */
+    background-color: #f8f8f8;
+    color: #1c1c1c;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
