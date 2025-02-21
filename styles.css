@@ -9,18 +9,20 @@ body {
 
 /* Üst Kısım (Header) */
 header {
-    background-color: #f8f8f8; /* Hafif gri arka plan, beyaz logo için kontrast */
-    color: #1c1c1c; /* Koyu metin */
+    background-color: #f8f8f8;
+    color: #1c1c1c;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Logo ortalı */
-    gap: 1rem; /* Gereksiz boşluk, başlık yok ama tutuyorum */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header .logo {
@@ -31,6 +33,21 @@ header .logo {
 header p {
     font-size: 1.2rem;
     margin: 0.5rem 0 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
 }
 
 /* Ana İçerik */
