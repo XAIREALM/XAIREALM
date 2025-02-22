@@ -3,19 +3,19 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #000;
-    min-height: 100vh; /* Sayfanın tam ekran yüksekliğini kaplamasını sağlar */
+    background-color: #1c1c1c;
+    color: #fff;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: #f8f8f8;
-    color: #1c1c1c;
+    background-color: #1c1c1c;
+    color: #fff;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header-container {
@@ -54,48 +54,63 @@ header p {
 /* Ana İçerik */
 main {
     padding: 2rem;
-    flex: 1; /* Main'in içeriği doldurmasını sağlar, footer'ı aşağı iter */
+    flex: 1;
 }
 
 /* Games Bölümü */
 #games-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     text-align: center;
 }
 
 #games-list h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    width: 100%;
 }
 
+.games-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Yatay kaydırma çubuğu */
+    gap: 1rem; /* Kartlar arasında boşluk */
+    padding-bottom: 1rem; /* Kaydırma çubuğu için boşluk */
+    scroll-behavior: smooth; /* Yumuşak kaydırma etkisi */
+    -webkit-overflow-scrolling: touch; /* Mobil cihazlar için akıcı kaydırma */
+}
+
+.games-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+.games-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+.games-scroll-container::-webkit-scrollbar-track {
+    background-color: #444;
+}
 .game-card {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
     border-radius: 8px;
     padding: 1.5rem;
-    margin: 1rem;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Kartların sabit genişliği */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* Kartların sıkışmasını önler */
 }
 
 .game-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .game-card h3 {
     font-size: 1.5rem;
     margin: 0 0 0.5rem;
-    color: #000;
+    color: #fff;
 }
 
 .game-card p {
     font-size: 1rem;
-    color: #333;
+    color: #ccc;
 }
 
 .game-card a {
@@ -129,14 +144,33 @@ main {
     margin: 0 auto;
 }
 
+/* Projenin Detayları Bölümü */
+#project-details {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#project-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#project-details p {
+    font-size: 1rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 /* Alt Kısım (Footer) */
 footer {
-    background-color: #f8f8f8;
-    color: #1c1c1c;
+    background-color: #1c1c1c;
+    color: #fff;
     text-align: center;
     padding: 1rem;
     width: 100%;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Bağlantılar */
