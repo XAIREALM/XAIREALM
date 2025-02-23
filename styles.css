@@ -8,6 +8,26 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Genel sayfadaki yatay kaydırmayı kaldırır */
+}
+
+/* Genel Sayfa Kaydırma Çubuğu (Webkit tarayıcılar için) */
+body::-webkit-scrollbar {
+    width: 10px; /* Dikey kaydırma çubuğunun genişliği */
+}
+
+body::-webkit-scrollbar-track {
+    background: #2a2a2a; /* Kaydırma çubuğu arka planı */
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #007bff; /* Kaydırma çubuğu tutamağı rengi */
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Üzerine gelince renk değişimi */
 }
 
 header {
@@ -181,4 +201,27 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Navigasyon Butonları */
+.nav-buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #0056b3;
 }

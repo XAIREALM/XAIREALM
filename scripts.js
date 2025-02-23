@@ -3,12 +3,23 @@ const ctx = document.getElementById('tokenomicsChart').getContext('2d');
 const tokenomicsChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['Community', 'Dev Wallet'],
+        labels: [
+            'Free Market',              // Serbest Piyasa
+            'Emergency Fund',          // Acil Durum Fonu
+            'Development Team Costs',  // Geliştirme Ekip Giderleri
+            'Marketing & Listing',     // Pazarlama ve Listeleme Giderleri
+            'Dev Share',          // Yaratıcı Payı
+            'Community Reward Pool'    // Topluluk Ödül Havuzu
+        ],
         datasets: [{
-            data: [90, 10], // %90 Community, %10 Dev Wallet
+            data: [90, 1, 2, 3, 2, 2],
             backgroundColor: [
-                '#4caf50', // Yeşil - Community
-                '#f44336'  // Kırmızı - Dev Wallet
+                '#4caf50', // Free Market - Yeşil
+                '#ff9800', // Emergency Fund - Turuncu
+                '#2196f3', // Development Team Costs - Mavi
+                '#9c27b0', // Marketing & Listing - Mor
+                '#f44336', // Creative Share - Kırmızı
+                '#ffeb3b'  // Community Reward Pool - Sarı
             ],
             borderWidth: 1
         }]
@@ -34,3 +45,9 @@ const tokenomicsChart = new Chart(ctx, {
         }
     }
 });
+
+// Bölümlere yumuşak kaydırma fonksiyonu
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+}

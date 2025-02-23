@@ -10,7 +10,9 @@
 </head>
 <body>
     <header>
+
         <div class="header-container">
+
             <img src="images/logo.png" alt="XAI Logo" class="logo">
             <div class="social-icons">
                 <a href="https://t.me/xairealm" target="_blank">
@@ -25,6 +27,12 @@
             </div>
         </div>
         <p>The best games powered by XAI!</p>
+<!-- Header’ın içine, .header-container’dan sonra ekleyin -->
+<nav class="nav-buttons">
+    <button onclick="scrollToSection('games-list')">Games</button>
+    <button onclick="scrollToSection('tokenomics')">Tokenomics</button>
+    <button onclick="scrollToSection('project-details')">About Project</button>
+</nav>
     </header>
     <main>
         <section id="games-list">
@@ -86,10 +94,10 @@
             <h2>Tokenomics</h2>
             <canvas id="tokenomicsChart" width="400" height="400"></canvas>
         </section>
-        <section id="project-details">
-            <h2>Projenin Detayları</h2>
-            <p>Buraya proje hakkında detaylarınızı yazabilirsiniz. Örneğin, projenin amacı, ekibiniz, vizyonunuz veya başka bilgiler...</p>
-        </section>
+<section id="project-details">
+    <h2>Project Details</h2>
+    <p>At XAI Realm, we are passionate about revolutionizing the gaming industry by leveraging the power of XAI artificial intelligence. Our mission is to create small-scale indie games that blend innovative gameplay with cutting-edge AI technology. By harnessing XAI, we aim to craft unique gaming experiences that captivate players, support indie developers, and push the boundaries of creativity in the gaming world.</p>
+</section>
     </main>
     <footer>
         <p>Make Video Games Great Again!</p>
