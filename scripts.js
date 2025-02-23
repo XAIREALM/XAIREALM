@@ -51,3 +51,14 @@ function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
 }
+
+// Progress Bar Güncelleme Fonksiyonu
+function updateProgress(solAmount) {
+    const maxSol = 5; // Hedef 5 SOL
+    const percentage = (solAmount / maxSol) * 100;
+    document.querySelector('.progress-fill').style.width = `${percentage}%`;
+    document.getElementById('current-sol').textContent = solAmount;
+}
+
+// Başlangıç değeri: 0 SOL
+updateProgress(0);
