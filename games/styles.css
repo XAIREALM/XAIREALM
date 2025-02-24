@@ -1,13 +1,36 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    height: 100vh;
     background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 100px; /* Logonun boyutunu isteğinize göre ayarlayabilirsiniz */
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 #gameCanvas {
-    width: 100vw;  /* Tam ekran genişlik */
-    height: 100vh; /* Tam ekran yükseklik */
-    display: block;
+    width: 1280px;
+    height: 720px;
+    background-color: #000;
+}
+
+#fullscreenBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
