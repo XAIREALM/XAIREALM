@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #000;
+}
+
+#gameCanvas {
+    width: 100vw;  /* Tam ekran genişlik */
+    height: 100vh; /* Tam ekran yükseklik */
+    display: block;
+}
